@@ -1,0 +1,11 @@
+langdetect==1.0.9
+pysbd==0.3.4
+spacy==3.8.7
+transformers>=4.40
+torch>=2.0
+
+# after installing, fetch the models:
+#   python -m spacy download en_core_web_sm
+#   python -m spacy download xx_ent_wiki_sm
+# the sentiment model (cardiffnlp/twitter-xlm-roberta-base-sentiment) downloads
+# automatically on first run via `transformers` and is cached locally after.
