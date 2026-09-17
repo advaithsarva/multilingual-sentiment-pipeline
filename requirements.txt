@@ -4,10 +4,14 @@ spacy==3.8.7
 transformers>=4.40
 torch>=2.0
 # The sentiment model is XLM-RoBERTa, whose tokenizer is SentencePiece.
-# transformers does not require it, falls back to a TikToken extractor, and
-# then raises `tiktoken is required` -- so three tests die on a clean install.
-# Only CI sees this; any machine with another SentencePiece model already has it.
+# transformers requires neither of these, needs both to convert that tokenizer,
+# and on a clean install silently falls back to a TikToken extractor and then
+# raises `tiktoken is required` -- taking out the three tests that load the
+# model. Only CI sees it; any machine with another SentencePiece model has both
+# already, which is why the first fix named only sentencepiece and CI came back
+# asking for protobuf as well.
 sentencepiece>=0.2
+protobuf>=4.25
 
 # after installing, fetch the models:
 #   python -m spacy download en_core_web_sm
