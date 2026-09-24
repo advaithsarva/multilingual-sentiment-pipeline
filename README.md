@@ -45,7 +45,7 @@ pip install -r requirements.txt
 python -m spacy download en_core_web_sm
 python -m spacy download xx_ent_wiki_sm
 
-python -m src.cli samples/doc_en.txt samples/doc_es.txt -o report.html
+python -m src.cli samples/doc_en.txt samples/doc_es.txt samples/doc_hi.txt -o report.html
 ```
 
 Open `report.html`. First run downloads the ~1.1GB sentiment model from
