@@ -27,9 +27,10 @@ def main():
             {
                 "label": d.label,
                 "language": d.language,
+                "summary": d.summary(),
                 "sentences": [
                     {"text": s.text, "start": s.start, "end": s.end,
-                     "sentiment": s.sentiment, "entities": s.entities}
+                     "sentiment": s.sentiment, "emotion": s.emotion, "entities": s.entities}
                     for s in d.sentences
                 ],
             }

@@ -6,3 +6,4 @@ __pycache__/
 report.html
 samples/report.html
 *.egg-info/
+.vscode/
